@@ -25,6 +25,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      df-messenger {
+        --df-messenger-bot-message: #878fac;
+        --df-messenger-button-titlebar-color: #df9b56;
+        --df-messenger-chat-background-color: #fafafa;
+        --df-messenger-font-color: white;
+        --df-messenger-send-icon: #878fac;
+        --df-messenger-user-message: #479b3d;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +49,11 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger intent="WELCOME" wait-open="true" chat-title="Lowes" agent-id="4ea1f272-d3f6-4393-a520-dbed4ae307bb" language-code="en">
+    </df-messenger>
+
+    <script type="text/javascript" src="../src/chat.js"> 
+    </script>
   </body>
 </html>
